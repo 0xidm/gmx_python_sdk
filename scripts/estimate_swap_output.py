@@ -1,4 +1,7 @@
+import time
+
 from web3 import Web3
+
 from gmx.data.oracle_prices import OraclePrices
 from gmx.data.markets import Markets
 from gmx.order.parser import OrderArgumentParser
@@ -141,8 +144,6 @@ class EstimateSwapOutput:
 
 
 if __name__ == "__main__":
-    import time
-
     start = time.time()
 
     in_token_symbol = "GMX"
