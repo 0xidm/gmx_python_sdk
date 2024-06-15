@@ -151,7 +151,3 @@ class GetClaimableFees(GetData):
         )
 
         return claimable_fee
-
-
-if __name__ == "__main__":
-    data = GetClaimableFees(chain="arbitrum").get_data(to_csv=True)

@@ -125,8 +125,3 @@ class GetFundingFee(GetData):
             self.output['short'][symbol] = short_funding_fee
 
         return self.output
-
-
-if __name__ == "__main__":
-
-    pass

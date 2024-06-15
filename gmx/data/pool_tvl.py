@@ -3,10 +3,7 @@ import numpy as np
 from .markets import Markets
 from .oracle_prices import OraclePrices
 from ..utils.keys import pool_amount_key
-from ..utils import (
-    get_datastore_contract, save_json_file_to_datastore,
-    make_timestamped_dataframe, save_csv_to_datastore
-)
+from ..utils import get_datastore_contract, save_json_file_to_datastore, make_timestamped_dataframe, save_csv_to_datastore
 
 
 class GetPoolTVL:
@@ -197,8 +194,3 @@ class GetPoolTVL:
             return token_price * token_balance
         except KeyError:
             return token_balance
-
-
-if __name__ == "__main__":
-    # chain = sys.argv[1]
-    pool_dict = GetPoolTVL(chain="arbitrum").get_pool_balances(to_csv=True)

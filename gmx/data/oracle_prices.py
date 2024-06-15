@@ -60,8 +60,3 @@ class OraclePrices:
             processed[i['tokenAddress']] = i
 
         return processed
-
-
-if __name__ == '__main__':
-
-    pass

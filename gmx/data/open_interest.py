@@ -136,8 +136,3 @@ class OpenInterest(GetData):
             self.output['short'][market_symbol] = short_value
 
         return self.output
-
-
-if __name__ == '__main__':
-    data = OpenInterest(chain="arbitrum").get_data(to_csv=False)
-    print(data)

@@ -298,12 +298,3 @@ class GetAvailableLiquidity(GetData):
         )
 
         return pool_amount, reserve_factor, open_interest_reserve_factor
-
-
-if __name__ == "__main__":
-    data = GetAvailableLiquidity(
-        chain="arbitrum",
-        use_local_datastore=False
-    ).get_data(
-        to_csv=False
-    )

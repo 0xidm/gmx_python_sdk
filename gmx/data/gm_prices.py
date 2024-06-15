@@ -203,7 +203,3 @@ class GMPrices(GetData):
         )
 
         return output
-
-
-if __name__ == "__main__":
-    output = GMPrices(chain="arbitrum").get_price_traders(to_csv=True)

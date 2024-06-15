@@ -53,7 +53,3 @@ class GetBorrowAPR(GetData):
                 )
             )
         return self.output
-
-
-if __name__ == "__main__":
-    data = GetBorrowAPR(chain='arbitrum').get_data(to_csv=False)

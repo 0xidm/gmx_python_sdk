@@ -157,9 +157,3 @@ class GetPoolTVL(GetData):
         except KeyError:
             print("Contract address not known")
             return token_balance
-
-
-if __name__ == "__main__":
-    # chain = sys.argv[1]
-    # chain = 'arbitrum'
-    pool_dict = GetPoolTVL(chain='arbitrum').get_data(to_json=False)

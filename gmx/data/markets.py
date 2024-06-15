@@ -143,9 +143,3 @@ class Markets:
 
             print("{} market not live on GMX yet..".format(index_token_address))
             return False
-
-
-if __name__ == '__main__':
-    raw_markets = Markets(
-        chain="arbitrum"
-    ).get_available_markets()
