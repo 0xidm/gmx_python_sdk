@@ -1,18 +1,19 @@
 [tool.poetry]
 name = "gmx_python_sdk"
-version = "0.0.4"
+version = "0.0.5"
 description = "A python based SDK developed for interacting with GMX v2"
 
 authors = [
   "snipermonke01 <snipermonke01@proton.me>",
-  "alienf33t <alienf33t@yahoo.com>"
+  "alienf33t <alienf33t@yahoo.com>",
+  "0xidm <0xidm@protonmail.com>"
 ]
 maintainers = [
   "snipermonke01 <snipermonke01@proton.me>",
   "alienf33t <alienf33t@yahoo.com>"
 ]
 
-repository = "https://github.com/snipermonke01/gmx_python_sdk"
+repository = "https://github.com/0xidm/gmx_python_sdk"
 
 readme = "README.md"
 license = "MIT"
