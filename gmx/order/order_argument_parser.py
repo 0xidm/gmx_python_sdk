@@ -2,7 +2,7 @@ import numpy as np
 
 from ..get.get_oracle_prices import OraclePrices
 from ..get.get_markets import Markets
-from ..utils.gmx import get_tokens_address_dict, determine_swap_route
+from ..utils import get_tokens_address_dict, determine_swap_route
 
 
 class OrderArgumentParser:

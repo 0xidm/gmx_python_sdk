@@ -4,7 +4,7 @@ import numpy as np
 from .get import GetData
 from .get_oracle_prices import OraclePrices
 
-from ..utils.gmx import (get_tokens_address_dict, convert_to_checksum_address)
+from ..utils import (get_tokens_address_dict, convert_to_checksum_address)
 
 chain = 'arbitrum'
 

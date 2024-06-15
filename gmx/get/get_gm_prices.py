@@ -1,10 +1,10 @@
 from .get import GetData
-from ..utils.gmx import (
+from ..utils import (
     get_reader_contract, contract_map, execute_threading,
     save_json_file_to_datastore, make_timestamped_dataframe,
     save_csv_to_datastore
 )
-from ..keys import (
+from ..utils.keys import (
     MAX_PNL_FACTOR_FOR_TRADERS, MAX_PNL_FACTOR_FOR_DEPOSITS,
     MAX_PNL_FACTOR_FOR_WITHDRAWALS
 )

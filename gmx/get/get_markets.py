@@ -1,4 +1,4 @@
-from ..utils.gmx import (
+from ..utils import (
     contract_map, get_tokens_address_dict, get_reader_contract
 )
 

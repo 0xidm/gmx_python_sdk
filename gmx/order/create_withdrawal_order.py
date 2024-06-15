@@ -1,6 +1,6 @@
 from .withdraw import Withdraw
 from ..utils.gas import get_gas_limits
-from ..utils.gmx import get_datastore_contract
+from ..utils import get_datastore_contract
 
 
 class WithdrawOrder(Withdraw):

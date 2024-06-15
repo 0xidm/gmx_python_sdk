@@ -4,8 +4,8 @@ from numerize import numerize
 
 from .get import GetData
 from .get_oracle_prices import OraclePrices
-from ..utils.gmx import execute_threading
-from ..keys import get_datastore_contract, claimable_fee_amount_key
+from ..utils import execute_threading
+from ..utils.keys import get_datastore_contract, claimable_fee_amount_key
 
 
 class GetClaimableFees(GetData):

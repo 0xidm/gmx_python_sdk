@@ -6,7 +6,7 @@ from web3 import Web3
 
 from ..get.get_markets import Markets
 from ..get.get_oracle_prices import OraclePrices
-from ..utils.gmx import (
+from ..utils import (
     get_exchange_router_contract, create_connection, contract_map,
     PRECISION, get_execution_price_and_price_impact, order_type as order_types,
     decrease_position_swap_type as decrease_position_swap_types,
@@ -111,7 +111,7 @@ class Order:
             )
             self.log.info("Txn submitted!")
             self.log.info(
-                "Check status: https://arbiscan.io/tx/{}".format(tx_hash.hex())
+                "Check status: https://arbiscan.io/tx/0x{}".format(tx_hash.hex())
             )
 
             self.log.info("Transaction submitted!")

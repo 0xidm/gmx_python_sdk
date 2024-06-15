@@ -3,7 +3,7 @@ from numerize import numerize
 
 from .get import GetData
 from .get_oracle_prices import OraclePrices
-from ..utils.gmx import execute_threading
+from ..utils import execute_threading
 
 
 class OpenInterest(GetData):

@@ -5,7 +5,7 @@ from .keys import (
     withdraw_gas_limit_key
 )
 
-from .utils.gmx import apply_factor, get_datastore_contract, create_connection
+from . import apply_factor, get_datastore_contract, create_connection
 
 
 def get_execution_fee(gas_limits: dict, estimated_gas_limit, gas_price: int):

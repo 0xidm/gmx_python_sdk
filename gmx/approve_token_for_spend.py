@@ -3,7 +3,7 @@ import os
 
 from web3 import Web3
 
-from .utils.gmx import (
+from .utils import (
     create_connection, base_dir, convert_to_checksum_address
 )
 
@@ -57,7 +57,7 @@ def check_if_approved(
 
     token_contract_abi = json.load(open(os.path.join(
         base_dir,
-        'gmx_python_sdk',
+        'gmx',
         'abis',
         'token_approval.json'
     )))
@@ -107,7 +107,7 @@ def check_if_approved(
         tx_hash = connection.eth.send_raw_transaction(signed_txn.rawTransaction)
 
         print("Txn submitted!")
-        print("Check status: https://arbiscan.io/tx/{}".format(tx_hash.hex()))
+        print("Check status: https://arbiscan.io/tx/0x{}".format(tx_hash.hex()))
 
     if amount_approved < amount_of_tokens_to_spend and not approve:
         raise Exception("Token not approved for spend, please allow first!")

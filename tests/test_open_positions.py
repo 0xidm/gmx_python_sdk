@@ -1,7 +1,7 @@
 import logging
 import numpy as np
 
-from ..utils.gmx import (
+from ..utils import (
     get_reader_contract, contract_map, get_tokens_address_dict,
     convert_to_checksum_address
 )

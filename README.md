@@ -265,7 +265,7 @@ Below shows an example of how to estimate swap output using the [EstimateSwapOut
 
 ```python
 from gmx_python_sdk.example_scripts.estimate_swap_output import EstimateSwapOutput
-from gmx_python_sdk.scripts.v2.utils.gmx import ConfigManager
+from gmx.utils import ConfigManager
 
 config = ConfigManager("arbitrum")
 config.set_config()
@@ -300,8 +300,8 @@ For increase:
 
 
 ```python
-from gmx_python_sdk.scripts.v2.order.order_argument_parser import OrderArgumentParser
-from gmx_python_sdk.scripts.v2.utils.gmx import ConfigManager
+from gmx.order.order_argument_parser import OrderArgumentParser
+from gmx.utils import ConfigManager
 
 config = ConfigManager("arbitrum")
 config.set_config()
@@ -343,8 +343,8 @@ order_parameters = OrderArgumentParser(
 For decrease:
 
 ```python
-from gmx_python_sdk.scripts.v2.order.order_argument_parser import OrderArgumentParser
-from gmx_python_sdk.scripts.v2.utils.gmx import ConfigManager
+from gmx.order.order_argument_parser import OrderArgumentParser
+from gmx.utils import ConfigManager
 
 config = ConfigManager("arbitrum")
 config.set_config()
@@ -381,8 +381,8 @@ order_parameters = OrderArgumentParser(
 For Swap:
 
 ```python
-from gmx_python_sdk.scripts.v2.order.order_argument_parser import OrderArgumentParser
-from gmx_python_sdk.scripts.v2.utils.gmx import ConfigManager
+from gmx.order.order_argument_parser import OrderArgumentParser
+from gmx.utils import ConfigManager
 
 config = ConfigManager("arbitrum")
 config.set_config()
@@ -424,8 +424,8 @@ Human readable numbers can be parsed in a dictionary with the following keys/val
 For Deposit:
 
 ```python
-from gmx_python_sdk.scripts.v2.order.liquidity_argument_parser import LiquidityArgumentParser
-from gmx_python_sdk.scripts.v2.utils.gmx import ConfigManager
+from gmx.order.liquidity_argument_parser import LiquidityArgumentParser
+from gmx.utils import ConfigManager
 
 config = ConfigManager("arbitrum")
 config.set_config()
@@ -451,8 +451,8 @@ output = LiquidityArgumentParser(
 For Withdraw:
 
 ```python
-from gmx_python_sdk.scripts.v2.order.liquidity_argument_parser import LiquidityArgumentParser
-from gmx_python_sdk.scripts.v2.utils.gmx import ConfigManager
+from gmx.order.liquidity_argument_parser import LiquidityArgumentParser
+from gmx.utils import ConfigManager
 
 parameters = {
     "chain": "arbitrum",
@@ -475,7 +475,7 @@ Instead of passing the parameters to close a position, if you are aware of the m
 
 ```python
 from gmx_python_sdk.example_scripts.get_positions import get_positions, transform_open_position_to_order_parameters
-from gmx_python_sdk.scripts.v2.utils.gmx import ConfigManager
+from gmx.utils import ConfigManager
 
 config = ConfigManager(chain='arbitrum')
 config.set_config()
@@ -512,7 +512,7 @@ A number of stats can be obtained using a wide range of scripts. The overview on
 
 ```python
 from gmx_python_sdk.example_scripts.get_gmx_stats import GetGMXv2Stats
-from gmx_python_sdk.scripts.v2.utils.gmx import ConfigManager
+from gmx.utils import ConfigManager
 
 to_json = False
 to_csv = False
@@ -543,7 +543,7 @@ pool_tvl = stats_object.get_pool_tvl()
 It is possible to call IncreaseOrder, DecreaseOrder, SwapOrder, DepositOrder, and WithdrawOrder in debug mode by passing debug_mode=True when initialising the class:
 
 ```python
-from gmx_python_sdk.scripts.v2.order.create_increase_order import IncreaseOrder
+from gmx.order.create_increase_order import IncreaseOrder
 
 order = IncreaseOrder(
     config=config,

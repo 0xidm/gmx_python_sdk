@@ -2,12 +2,12 @@ from utils import _set_paths
 
 _set_paths()
 
-from gmx_python_sdk.scripts.v2.order.create_swap_order import SwapOrder
-from gmx_python_sdk.scripts.v2.order.order_argument_parser import (
+from gmx.order.create_swap_order import SwapOrder
+from gmx.order.order_argument_parser import (
     OrderArgumentParser
 )
 
-from gmx_python_sdk.scripts.v2.utils.gmx import ConfigManager
+from gmx.utils import ConfigManager
 
 config = ConfigManager(chain='arbitrum')
 config.set_config()

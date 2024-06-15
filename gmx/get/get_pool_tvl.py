@@ -2,8 +2,8 @@ import numpy as np
 
 from .get_markets import Markets
 from .get_oracle_prices import OraclePrices
-from ..keys import pool_amount_key
-from ..utils.gmx import (
+from ..utils.keys import pool_amount_key
+from ..utils import (
     get_datastore_contract, save_json_file_to_datastore,
     make_timestamped_dataframe, save_csv_to_datastore
 )

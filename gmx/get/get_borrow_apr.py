@@ -1,5 +1,5 @@
 from .get import GetData
-from ..utils.gmx import execute_threading
+from ..utils import execute_threading
 
 
 class GetBorrowAPR(GetData):

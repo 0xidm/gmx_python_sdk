@@ -7,8 +7,8 @@ from typing import Tuple, Any
 from .get import GetData
 from .get_oracle_prices import OraclePrices
 from .get_open_interest import OpenInterest
-from ..utils.gmx import execute_threading
-from ..keys import (
+from ..utils import execute_threading
+from ..utils.keys import (
     get_datastore_contract, pool_amount_key, reserve_factor_key,
     open_interest_reserve_factor_key
 )

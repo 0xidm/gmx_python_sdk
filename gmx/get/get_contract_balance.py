@@ -3,7 +3,7 @@ import numpy as np
 from .get import GetData
 from .get_markets import Markets
 from .get_oracle_prices import OraclePrices
-from ..utils.gmx import get_token_balance_contract, save_json_file_to_datastore
+from ..utils import get_token_balance_contract, save_json_file_to_datastore
 
 
 class GetPoolTVL(GetData):

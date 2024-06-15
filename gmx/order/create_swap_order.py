@@ -3,7 +3,7 @@ from web3 import Web3
 from .order import Order
 from ..utils.gas import get_gas_limits
 from ..get.get_oracle_prices import OraclePrices
-from ..utils.gmx import (
+from ..utils import (
     get_estimated_swap_output, contract_map, get_datastore_contract
 )
 

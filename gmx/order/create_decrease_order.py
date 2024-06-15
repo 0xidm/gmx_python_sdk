@@ -1,12 +1,12 @@
-from .deposit import Deposit
+from .order import Order
 from ..utils.gas import get_gas_limits
-from ..utils.gmx import get_datastore_contract
+from ..utils import get_datastore_contract
 
 
-class DepositOrder(Deposit):
+class DecreaseOrder(Order):
     """
-    Open a Deposit order
-    Extends base Deposit class
+    Open a sell order
+    Extends base Order class
     """
 
     def __init__(self, *args: list, **kwargs: dict) -> None:
@@ -14,11 +14,10 @@ class DepositOrder(Deposit):
             *args, **kwargs
         )
 
-        # Createa a deposit order
-        self.create_deposit_order()
+        # Close an order
+        self.order_builder(is_close=True)
 
     def determine_gas_limits(self):
-
         datastore = get_datastore_contract(self.config)
         self._gas_limits = get_gas_limits(datastore)
-        self._gas_limits_order_type = self._gas_limits["increase_order"]
+        self._gas_limits_order_type = self._gas_limits["decrease_order"]

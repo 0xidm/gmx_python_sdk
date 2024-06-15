@@ -3,7 +3,7 @@ import numpy as np
 from ..get.get_markets import Markets
 from ..get.get_oracle_prices import OraclePrices
 
-from ..utils.gmx import get_tokens_address_dict
+from ..utils import get_tokens_address_dict
 
 
 class LiquidityArgumentParser:

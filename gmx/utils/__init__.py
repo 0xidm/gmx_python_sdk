@@ -15,9 +15,9 @@ from concurrent.futures import ThreadPoolExecutor
 # Get the absolute path of the current script
 current_script_path = os.path.abspath(__file__)
 base_dir = os.path.abspath(
-    os.path.join(current_script_path, '..', '..',)
+    os.path.join(current_script_path, '..', '..', '..',)
 )
-package_dir = base_dir + '/gmx_python_sdk/'
+package_dir = base_dir + '/gmx/'
 print('base_dir', base_dir)
 
 logging.basicConfig(
@@ -225,7 +225,7 @@ def get_contract_object(web3_obj, contract_name: str, chain: str):
         open(
             os.path.join(
                 base_dir,
-                'gmx_python_sdk',
+                'gmx',
                 contract_map[chain][contract_name]["abi_path"]
             )
         )

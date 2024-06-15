@@ -2,11 +2,11 @@ from utils import _set_paths
 
 _set_paths()
 
-from gmx_python_sdk.scripts.v2.order.create_decrease_order import DecreaseOrder
+from gmx.order.create_decrease_order import DecreaseOrder
 from get_positions import (
     get_positions, transform_open_position_to_order_parameters
 )
-from gmx_python_sdk.scripts.v2.utils.gmx import (
+from gmx.utils import (
     ConfigManager
 )
 

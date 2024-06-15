@@ -2,22 +2,22 @@ from utils import _set_paths
 
 _set_paths()
 
-from gmx_python_sdk.scripts.v2.get.get_available_liquidity import (
+from gmx.get.get_available_liquidity import (
     GetAvailableLiquidity
 )
-from gmx_python_sdk.scripts.v2.get.get_borrow_apr import GetBorrowAPR
-from gmx_python_sdk.scripts.v2.get.get_claimable_fees import GetClaimableFees
-from gmx_python_sdk.scripts.v2.get.get_contract_balance import (
+from gmx.get.get_borrow_apr import GetBorrowAPR
+from gmx.get.get_claimable_fees import GetClaimableFees
+from gmx.get.get_contract_balance import (
     GetPoolTVL as ContractTVL
 )
-from gmx_python_sdk.scripts.v2.get.get_funding_apr import GetFundingFee
-from gmx_python_sdk.scripts.v2.get.get_gm_prices import GMPrices
-from gmx_python_sdk.scripts.v2.get.get_markets import Markets
-from gmx_python_sdk.scripts.v2.get.get_open_interest import OpenInterest
-from gmx_python_sdk.scripts.v2.get.get_oracle_prices import OraclePrices
-from gmx_python_sdk.scripts.v2.get.get_pool_tvl import GetPoolTVL
+from gmx.get.get_funding_apr import GetFundingFee
+from gmx.get.get_gm_prices import GMPrices
+from gmx.get.get_markets import Markets
+from gmx.get.get_open_interest import OpenInterest
+from gmx.get.get_oracle_prices import OraclePrices
+from gmx.get.get_pool_tvl import GetPoolTVL
 
-from gmx_python_sdk.scripts.v2.utils.gmx import ConfigManager
+from gmx.utils import ConfigManager
 
 
 class GetGMXv2Stats:

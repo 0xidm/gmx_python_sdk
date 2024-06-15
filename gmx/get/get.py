@@ -2,7 +2,7 @@ import logging
 
 from .get_markets import Markets
 from .get_oracle_prices import OraclePrices
-from ..utils.gmx import (
+from ..utils import (
     get_reader_contract, contract_map, save_json_file_to_datastore,
     save_csv_to_datastore, make_timestamped_dataframe
 )
