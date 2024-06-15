@@ -1,5 +1,4 @@
 /**/env
 /**/.DS_Store
-/**/*.csv
-/**/*.json
 /**/__pycache__
+/gmx_python_sdk/data_store/*.csv
