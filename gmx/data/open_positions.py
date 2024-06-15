@@ -1,8 +1,11 @@
 import logging
+from decimal import Decimal
+
 import numpy as np
 
 from . import GetData
 from .oracle_prices import OraclePrices
+from .markets import Markets
 from ..utils import get_tokens_address_dict, convert_to_checksum_address, find_dictionary_by_key_value, determine_swap_route
 
 
@@ -13,6 +16,7 @@ class GetOpenPositions(GetData):
     def __init__(self, config: str, address: str):
         super().__init__(config)
         self.address = convert_to_checksum_address(config, address)
+        self.recent_prices = OraclePrices(chain=chain).get_recent_prices()
 
     def get_data(self):
         """
@@ -96,14 +100,14 @@ class GetOpenPositions(GetData):
                 raw_position[0][2]
             ]['decimals']
         )
-        prices = OraclePrices(chain=chain).get_recent_prices()
+        
         mark_price = np.median(
             [
                 float(
-                    prices[market_info['index_token_address']]['maxPriceFull']
+                    self.recent_prices[market_info['index_token_address']]['maxPriceFull']
                 ),
                 float(
-                    prices[market_info['index_token_address']]['minPriceFull']
+                    self.recent_prices[market_info['index_token_address']]['minPriceFull']
                 )
             ]
         ) / 10 ** (

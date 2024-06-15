@@ -3,3 +3,4 @@
 /**/__pycache__
 /gmx/data_store/*.csv
 /gmx/data_store/*.json
+/config.yaml

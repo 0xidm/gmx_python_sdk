@@ -13,10 +13,9 @@ positions = get_positions(
     address=None
 )
 
-market_symbol = "ETH"
-is_long = True
-
+market_symbol = "BTC"
 out_token = "USDC"
+is_long = True
 amount_of_position_to_close = 1
 amount_of_collateral_to_remove = 1
 
