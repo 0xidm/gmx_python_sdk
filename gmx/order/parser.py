@@ -1,7 +1,7 @@
 import numpy as np
 
-from ..get.get_oracle_prices import OraclePrices
-from ..get.get_markets import Markets
+from ..data.oracle_prices import OraclePrices
+from ..data.markets import Markets
 from ..utils import get_tokens_address_dict, determine_swap_route
 
 
@@ -467,27 +467,4 @@ class OrderArgumentParser:
         if leverage_requested > max_leverage:
             raise Exception('Leverage requested "x{:.2f}" can not exceed x100!'.format(
                 leverage_requested
-            )
-            )
-
-
-if __name__ == "__main__":
-
-    chain = 'arbitrum'
-    is_long = True
-
-    initial_collateral_delta_amount = 1.1
-    slippage_percent = 0.005
-
-    parameters = {
-        "chain": chain,
-        "index_token_symbol": "ARB",
-        "start_token_symbol": "BTC",
-        "collateral_token_symbol": "USDC",
-        "is_long": is_long,
-        "size_delta": 100000,
-        "leverage": 1,
-        "slippage_percent": slippage_percent
-    }
-
-    processed_dict = OrderArgumentParser().process_parameters_dictionary(parameters)
+        ))

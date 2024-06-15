@@ -1,8 +1,8 @@
 import time
 from numerize import numerize
 
-from .get import GetData
-from .get_oracle_prices import OraclePrices
+from . import GetData
+from .oracle_prices import OraclePrices
 from ..utils import execute_threading
 
 

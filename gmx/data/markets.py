@@ -2,7 +2,7 @@ from ..utils import (
     contract_map, get_tokens_address_dict, get_reader_contract
 )
 
-from .get_oracle_prices import OraclePrices
+from .oracle_prices import OraclePrices
 
 
 class Markets:

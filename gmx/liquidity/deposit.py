@@ -4,16 +4,13 @@ from web3 import Web3
 
 from hexbytes import HexBytes
 
-from ..get.get_markets import Markets
-from ..get.get_oracle_prices import OraclePrices
-
+from ..utils.approve import check_if_approved
+from ..data.markets import Markets
+from ..data.oracle_prices import OraclePrices
+from ..utils.gas import get_execution_fee
 from ..utils import convert_to_checksum_address, \
     get_exchange_router_contract, create_connection, \
     determine_swap_route, contract_map, get_estimated_deposit_amount_out
-
-from ..approve_token_for_spend import check_if_approved
-
-from ..utils.gas import get_execution_fee
 
 
 class Deposit:

@@ -1,20 +1,13 @@
-from utils import _set_paths
-
-_set_paths()
-
 import time
 import numpy as np
 from numerize import numerize
-from gmx.get.get_available_liquidity import (
-    GetAvailableLiquidity
-)
-from gmx.get.get_borrow_apr import GetBorrowAPR
-from gmx.get.get_funding_apr import GetFundingFee
-from gmx.get.get_open_interest import OpenInterest
-from gmx.order.order_argument_parser import (
-    OrderArgumentParser
-)
-from gmx.order.create_increase_order import IncreaseOrder
+
+from gmx.data.available_liquidity import GetAvailableLiquidity
+from gmx.data.borrow_apr import GetBorrowAPR
+from gmx.data.funding_apr import GetFundingFee
+from gmx.data.open_interest import OpenInterest
+from gmx.order.parser import OrderArgumentParser
+from gmx.order.position import IncreaseOrder
 
 
 def get_data(chain: str = 'arbitrum'):

@@ -3,9 +3,7 @@ import os
 
 from web3 import Web3
 
-from .utils import (
-    create_connection, base_dir, convert_to_checksum_address
-)
+from . import create_connection, base_dir, convert_to_checksum_address
 
 
 def check_if_approved(

@@ -2,8 +2,8 @@ import numpy as np
 
 from numerize import numerize
 
-from .get import GetData
-from .get_oracle_prices import OraclePrices
+from . import GetData
+from .oracle_prices import OraclePrices
 from ..utils import execute_threading
 from ..utils.keys import get_datastore_contract, claimable_fee_amount_key
 

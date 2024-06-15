@@ -1,4 +1,4 @@
-from .get import GetData
+from . import GetData
 from ..utils import execute_threading
 
 

@@ -1,24 +1,11 @@
-from utils import _set_paths
-
-_set_paths()
-
 from web3 import Web3
-from gmx.get.get_oracle_prices import OraclePrices
-from gmx.get.get_markets import Markets
-from gmx.order.order_argument_parser import (
-    OrderArgumentParser
-)
-from gmx.utils import (
-    get_estimated_swap_output,
-    contract_map,
-    determine_swap_route,
-    get_tokens_address_dict,
-    ConfigManager
-)
+from gmx.data.oracle_prices import OraclePrices
+from gmx.data.markets import Markets
+from gmx.order.parser import OrderArgumentParser
+from gmx.utils import get_estimated_swap_output, contract_map, determine_swap_route, get_tokens_address_dict, ConfigManager
 
 
 class EstimateSwapOutput:
-
     def __init__(self, config):
         self.config = config
         self.markets = Markets(config).get_available_markets()

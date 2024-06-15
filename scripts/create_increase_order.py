@@ -1,13 +1,7 @@
-from utils import _set_paths
-
-_set_paths()
-
-from gmx.order.order_argument_parser import (
-    OrderArgumentParser
-)
-from gmx.order.create_increase_order import IncreaseOrder
-
+from gmx.order.parser import OrderArgumentParser
+from gmx.order.position import IncreaseOrder
 from gmx.utils import ConfigManager
+
 
 arbitrum_config_object = ConfigManager(chain='arbitrum')
 arbitrum_config_object.set_config()
@@ -38,7 +32,6 @@ parameters = {
     # as a decimal ie 0.003 == 0.3%
     "slippage_percent": 0.003
 }
-
 
 order_parameters = OrderArgumentParser(
     arbitrum_config_object,

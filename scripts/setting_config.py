@@ -1,7 +1,3 @@
-from utils import _set_paths
-
-_set_paths()
-
 from gmx.utils import ConfigManager
 
 arbitrum_config_object = ConfigManager(chain='arbitrum')

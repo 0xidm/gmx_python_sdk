@@ -300,7 +300,7 @@ For increase:
 
 
 ```python
-from gmx.order.order_argument_parser import OrderArgumentParser
+from gmx.order.parser import OrderArgumentParser
 from gmx.utils import ConfigManager
 
 config = ConfigManager("arbitrum")
@@ -343,7 +343,7 @@ order_parameters = OrderArgumentParser(
 For decrease:
 
 ```python
-from gmx.order.order_argument_parser import OrderArgumentParser
+from gmx.order.parser import OrderArgumentParser
 from gmx.utils import ConfigManager
 
 config = ConfigManager("arbitrum")
@@ -381,7 +381,7 @@ order_parameters = OrderArgumentParser(
 For Swap:
 
 ```python
-from gmx.order.order_argument_parser import OrderArgumentParser
+from gmx.order.parser import OrderArgumentParser
 from gmx.utils import ConfigManager
 
 config = ConfigManager("arbitrum")
@@ -424,7 +424,7 @@ Human readable numbers can be parsed in a dictionary with the following keys/val
 For Deposit:
 
 ```python
-from gmx.order.liquidity_argument_parser import LiquidityArgumentParser
+from gmx.liquidity.parser import LiquidityArgumentParser
 from gmx.utils import ConfigManager
 
 config = ConfigManager("arbitrum")
@@ -451,7 +451,7 @@ output = LiquidityArgumentParser(
 For Withdraw:
 
 ```python
-from gmx.order.liquidity_argument_parser import LiquidityArgumentParser
+from gmx.liquidity.parser import LiquidityArgumentParser
 from gmx.utils import ConfigManager
 
 parameters = {

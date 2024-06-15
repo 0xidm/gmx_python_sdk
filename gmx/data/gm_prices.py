@@ -1,4 +1,4 @@
-from .get import GetData
+from . import GetData
 from ..utils import (
     get_reader_contract, contract_map, execute_threading,
     save_json_file_to_datastore, make_timestamped_dataframe,

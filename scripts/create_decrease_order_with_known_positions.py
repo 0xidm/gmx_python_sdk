@@ -1,14 +1,7 @@
-from utils import _set_paths
+from gmx.order.position import DecreaseOrder
+from gmx.data.open_positions import transform_open_position_to_order_parameters, get_positions
+from gmx.utils import ConfigManager
 
-_set_paths()
-
-from gmx.order.create_decrease_order import DecreaseOrder
-from get_positions import (
-    get_positions, transform_open_position_to_order_parameters
-)
-from gmx.utils import (
-    ConfigManager
-)
 
 config = ConfigManager(chain='arbitrum')
 config.set_config()
@@ -23,14 +16,16 @@ amount_of_collateral_to_remove = 1
 # gets all open positions as a dictionary, which the keys as each position
 positions = get_positions(config)
 
-order_parameters = transform_open_position_to_order_parameters(config,
-                                                               positions,
-                                                               market_symbol,
-                                                               is_long,
-                                                               slippage_percent,
-                                                               out_token,
-                                                               amount_of_position_to_close,
-                                                               amount_of_collateral_to_remove)
+order_parameters = transform_open_position_to_order_parameters(
+    config,
+    positions,
+    market_symbol,
+    is_long,
+    slippage_percent,
+    out_token,
+    amount_of_position_to_close,
+    amount_of_collateral_to_remove
+)
 
 
 order = DecreaseOrder(

@@ -5,8 +5,8 @@ from ..utils import (
     get_reader_contract, contract_map, get_tokens_address_dict,
     convert_to_checksum_address
 )
-from .get_markets import Markets
-from .get_oracle_prices import OraclePrices
+from .markets import Markets
+from .oracle_prices import OraclePrices
 
 chain = 'arbitrum'
 

@@ -1,17 +1,10 @@
-from utils import _set_paths
-
-_set_paths()
-
-from gmx.order.create_decrease_order import DecreaseOrder
-from gmx.order.order_argument_parser import (
-    OrderArgumentParser
-)
-
+from gmx.order.position import DecreaseOrder
+from gmx.order.parser import OrderArgumentParser
 from gmx.utils import ConfigManager
+
 
 config = ConfigManager(chain='arbitrum')
 config.set_config()
-
 
 # Example of passing arguments through the Order parser to close the desired position
 parameters = {

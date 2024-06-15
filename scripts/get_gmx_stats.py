@@ -1,27 +1,17 @@
-from utils import _set_paths
-
-_set_paths()
-
-from gmx.get.get_available_liquidity import (
-    GetAvailableLiquidity
-)
-from gmx.get.get_borrow_apr import GetBorrowAPR
-from gmx.get.get_claimable_fees import GetClaimableFees
-from gmx.get.get_contract_balance import (
-    GetPoolTVL as ContractTVL
-)
-from gmx.get.get_funding_apr import GetFundingFee
-from gmx.get.get_gm_prices import GMPrices
-from gmx.get.get_markets import Markets
-from gmx.get.get_open_interest import OpenInterest
-from gmx.get.get_oracle_prices import OraclePrices
-from gmx.get.get_pool_tvl import GetPoolTVL
-
+from gmx.data.available_liquidity import GetAvailableLiquidity
+from gmx.data.borrow_apr import GetBorrowAPR
+from gmx.data.claimable_fees import GetClaimableFees
+from gmx.data.contract_balance import GetPoolTVL as ContractTVL
+from gmx.data.funding_apr import GetFundingFee
+from gmx.data.gm_prices import GMPrices
+from gmx.data.markets import Markets
+from gmx.data.open_interest import OpenInterest
+from gmx.data.oracle_prices import OraclePrices
+from gmx.data.pool_tvl import GetPoolTVL
 from gmx.utils import ConfigManager
 
 
 class GetGMXv2Stats:
-
     def __init__(self, config, to_json, to_csv):
         self.config = config
         self.to_json = to_json

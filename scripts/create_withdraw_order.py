@@ -1,22 +1,10 @@
-from utils import _set_paths
-
-_set_paths()
-
-from gmx.order.create_withdrawal_order import (
-    WithdrawOrder
-)
-from gmx.order.liquidity_argument_parser import (
-    LiquidityArgumentParser
-)
-
-from gmx.utils import (
-    ConfigManager
-)
+from gmx.order.liquidity import WithdrawOrder
+from gmx.liquidity.parser import LiquidityArgumentParser
+from gmx.utils import ConfigManager
 
 
 config = ConfigManager("arbitrum")
 config.set_config()
-
 
 parameters = {
     "chain": "arbitrum",

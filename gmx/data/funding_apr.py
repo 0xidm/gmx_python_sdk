@@ -1,8 +1,8 @@
 import json
 import os
 
-from .get import GetData
-from .get_open_interest import OpenInterest
+from . import GetData
+from .open_interest import OpenInterest
 from ..utils import (
     get_funding_factor_per_period, base_dir, execute_threading,
 )

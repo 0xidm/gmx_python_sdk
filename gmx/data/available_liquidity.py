@@ -4,9 +4,9 @@ import numpy as np
 from numerize import numerize
 from typing import Tuple, Any
 
-from .get import GetData
-from .get_oracle_prices import OraclePrices
-from .get_open_interest import OpenInterest
+from . import GetData
+from .oracle_prices import OraclePrices
+from .open_interest import OpenInterest
 from ..utils import execute_threading
 from ..utils.keys import (
     get_datastore_contract, pool_amount_key, reserve_factor_key,

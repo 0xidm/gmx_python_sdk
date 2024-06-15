@@ -1,17 +1,10 @@
-from utils import _set_paths
-
-_set_paths()
-
-from gmx.order.create_swap_order import SwapOrder
-from gmx.order.order_argument_parser import (
-    OrderArgumentParser
-)
-
+from gmx.order.swap import SwapOrder
+from gmx.order.parser import OrderArgumentParser
 from gmx.utils import ConfigManager
+
 
 config = ConfigManager(chain='arbitrum')
 config.set_config()
-
 
 parameters = {
     "chain": 'arbitrum',
@@ -36,7 +29,6 @@ parameters = {
     # as a percentage
     "slippage_percent": 0.03
 }
-
 
 order_parameters = OrderArgumentParser(
     config,
